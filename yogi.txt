@@ -26,5 +26,13 @@ COMMANDS:press ESC to using the commands
 :/backward search n to find the next occurrence and N to search in opposite direction
 :? forward search
 :l to run the shell commands like:ldir,:lls
-:
+:w-test (where test is the filename you chose.)save the file
+:v-starts visual mode for selecting the lines and you can perform operation on that liked d delete
+:r-filename will insert the content int the current file
+:R-to replace more then one character
+:y-operator to copy text using v visual mode and start insert mode
+:yw-(copy)links one word
+:o-open a line below the cursor and start insert mode
+:O-open a line above the cursor.
+
 
