@@ -1,0 +1,154 @@
+rjun,8
+64,16ug08064,ajay,7.2
+65,16ug08065,rani,6.9
+66,16ug08066,abdul,9.9
+67,16ug08067,bahubali,8.1
+68,16ug08068,sid,5.7
+69,16ug08069,fahim,4.66
+70,16ug08070,lucy,7.66
+cs2016b119@user:~/yogi1$ grep -v ravi yogi.csv,grep -v suraj yogi.csv
+grep: yogi.csv,grep: No such file or directory
+grep: suraj: No such file or directory
+yogi.csv:Roll,usn,Name,cgpa
+yogi.csv:61,16ug08061,suraj,6.5
+yogi.csv:62,16ug08062,kriti,7.7
+yogi.csv:63,16ug08063,arjun,8
+yogi.csv:64,16ug08064,ajay,7.2
+yogi.csv:65,16ug08065,rani,6.9
+yogi.csv:66,16ug08066,abdul,9.9
+yogi.csv:67,16ug08067,bahubali,8.1
+yogi.csv:68,16ug08068,sid,5.7
+yogi.csv:69,16ug08069,fahim,4.66
+yogi.csv:70,16ug08070,lucy,7.66
+cs2016b119@user:~/yogi1$ grep rav,isuraj yogi.csv
+cs2016b119@user:~/yogi1$ grep -v ravi,lucy yogi.csv
+Roll,usn,Name,cgpa
+60,16ug08060,ravi,9.1
+61,16ug08061,suraj,6.5
+62,16ug08062,kriti,7.7
+63,16ug08063,arjun,8
+64,16ug08064,ajay,7.2
+65,16ug08065,rani,6.9
+66,16ug08066,abdul,9.9
+67,16ug08067,bahubali,8.1
+68,16ug08068,sid,5.7
+69,16ug08069,fahim,4.66
+70,16ug08070,lucy,7.66
+cs2016b119@user:~/yogi1$ sort yogi.csv
+60,16ug08060,ravi,9.1
+61,16ug08061,suraj,6.5
+62,16ug08062,kriti,7.7
+63,16ug08063,arjun,8
+64,16ug08064,ajay,7.2
+65,16ug08065,rani,6.9
+66,16ug08066,abdul,9.9
+67,16ug08067,bahubali,8.1
+68,16ug08068,sid,5.7
+69,16ug08069,fahim,4.66
+70,16ug08070,lucy,7.66
+Roll,usn,Name,cgpa
+cs2016b119@user:~/yogi1$ sort -r yogi.csv
+Roll,usn,Name,cgpa
+70,16ug08070,lucy,7.66
+69,16ug08069,fahim,4.66
+68,16ug08068,sid,5.7
+67,16ug08067,bahubali,8.1
+66,16ug08066,abdul,9.9
+65,16ug08065,rani,6.9
+64,16ug08064,ajay,7.2
+63,16ug08063,arjun,8
+62,16ug08062,kriti,7.7
+61,16ug08061,suraj,6.5
+60,16ug08060,ravi,9.1
+cs2016b119@user:~/yogi1$ sort -f yogi.csv
+60,16ug08060,ravi,9.1
+61,16ug08061,suraj,6.5
+62,16ug08062,kriti,7.7
+63,16ug08063,arjun,8
+64,16ug08064,ajay,7.2
+65,16ug08065,rani,6.9
+66,16ug08066,abdul,9.9
+67,16ug08067,bahubali,8.1
+68,16ug08068,sid,5.7
+69,16ug08069,fahim,4.66
+70,16ug08070,lucy,7.66
+Roll,usn,Name,cgpa
+cs2016b119@user:~/yogi1$ man echo
+cs2016b119@user:~/yogi1$ 
+cs2016b119@user:~/yogi1$ cut -d , -f 3 yogi.csv
+Name
+ravi
+suraj
+kriti
+arjun
+ajay
+rani
+abdul
+bahubali
+sid
+fahim
+lucy
+cs2016b119@user:~/yogi1$ cut -d , -f 4 yogi.csv
+cgpa
+9.1
+6.5
+7.7
+8
+7.2
+6.9
+9.9
+8.1
+5.7
+4.66
+7.66
+cs2016b119@user:~/yogi1$ cut -d , -f 4 yogi.csv|grep -v cgpa|sort
+4.66
+5.7
+6.5
+6.9
+7.2
+7.66
+7.7
+8
+8.1
+9.1
+9.9
+cs2016b119@user:~/yogi1$ dat +"%T" yogi.csv
+The program 'dat' is currently not installed. To run 'dat' please ask your administrator to install the package 'liballegro4-dev'
+cs2016b119@user:~/yogi1$ date +"%T" yogi.csv
+date: extra operand ‘yogi.csv’
+Try 'date --help' for more information.
+cs2016b119@user:~/yogi1$ date + "%T" yogi.csv
+date: extra operand ‘%T’
+Try 'date --help' for more information.
+cs2016b119@user:~/yogi1$ date +%H%M
+1516
+cs2016b119@user:~/yogi1$ uniq -c yogi.csv
+      1 Roll,usn,Name,cgpa
+      1 60,16ug08060,ravi,9.1
+      1 61,16ug08061,suraj,6.5
+      1 62,16ug08062,kriti,7.7
+      1 63,16ug08063,arjun,8
+      1 64,16ug08064,ajay,7.2
+      1 65,16ug08065,rani,6.9
+      1 66,16ug08066,abdul,9.9
+      1 67,16ug08067,bahubali,8.1
+      1 68,16ug08068,sid,5.7
+      1 69,16ug08069,fahim,4.66
+      1 70,16ug08070,lucy,7.66
+cs2016b119@user:~/yogi1$ ls -l
+total 12
+-rw-r--r-- 1 cs2016b119 cs2016b119 1225 Jan 30 14:00 ls3
+-rw-r--r-- 1 cs2016b119 cs2016b119  227 Jan 27 11:42 yogi1
+-rw-rw-r-- 1 cs2016b119 cs2016b119  269 Jan 30 14:07 yogi.csv
+cs2016b119@user:~/yogi1$ ls -l|wc -l
+4
+cs2016b119@user:~/yogi1$ tail -n 8 yogi.csv
+67,16ug08067,bahubali,8.1
+68,16ug08068,sid,5.7
+69,16ug08069,fahim,4.66
+70,16ug08070,lucy,7.66
+71,16ug08071,raju,5
+72,16ug08072,kaju,8
+73,16ug08073,ram,7
+74,16ug08074,sham,6
