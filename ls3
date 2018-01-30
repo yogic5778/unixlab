@@ -1,0 +1,73 @@
+er:~$ cd yogi1
+cs2016b119@user:~/yogi1$ cat yogi.csv
+Roll,usn,Name
+60,16ug08060,ravi
+61,16ug08061,suraj
+62,16ug08062,kriti
+63,16ug08063,arjun
+64,16ug08064,ajay
+65,16ug08065,rani
+66,16ug08066,abdul
+67,16ug08067,bahubali
+68,16ug08068,sid
+69,16ug08069,fahim
+70,16ug08070,lucy
+cs2016b119@user:~/yogi1$ sort yogi.csv
+60,16ug08060,ravi
+61,16ug08061,suraj
+62,16ug08062,kriti
+63,16ug08063,arjun
+64,16ug08064,ajay
+65,16ug08065,rani
+66,16ug08066,abdul
+67,16ug08067,bahubali
+68,16ug08068,sid
+69,16ug08069,fahim
+70,16ug08070,lucy
+Roll,usn,Name
+cs2016b119@user:~/yogi1$ head -n 6 yogi.csv
+Roll,usn,Name
+60,16ug08060,ravi
+61,16ug08061,suraj
+62,16ug08062,kriti
+63,16ug08063,arjun
+64,16ug08064,ajay
+cs2016b119@user:~/yogi1$ tail -n 7 yogi.csv
+64,16ug08064,ajay
+65,16ug08065,rani
+66,16ug08066,abdul
+67,16ug08067,bahubali
+68,16ug08068,sid
+69,16ug08069,fahim
+70,16ug08070,lucy
+cs2016b119@user:~/yogi1$ cut -d,-f 1 yogi.csv
+cut: the delimiter must be a single character
+Try 'cut --help' for more information.
+cs2016b119@user:~/yogi1$ cut -d , -f 1 yogi.csv
+Roll
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+cs2016b119@user:~/yogi1$ cut -d , -f 3 yogi.csv
+Name
+ravi
+suraj
+kriti
+arjun
+ajay
+rani
+abdul
+bahubali
+sid
+fahim
+lucy
+cs2016b119@user:~/yogi1$ vim ls3
+
