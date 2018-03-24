@@ -2,5 +2,5 @@ echo "Enter word of phrase to be seached"
 read n
 for i in /
 do    
-          find / "$n"print
+          find / "$n"
 done
