@@ -1,0 +1,52 @@
+Q1)
+------> cat test2.txt
+Employee Name    Employee ID    Designation           Salary
+John              110110         Manager               150000
+Jacob             12390         Software Developer     50000
+Yogendar          125683        Network Engineer       45000
+Soham             122787          M.D                  300000
+Hitesh            125376        C.E.0                  1500000
+Q2)
+-----> To replace "Manager" with "Director"
+ sed  's\Manager\Director\g;' test2.txt
+Result:
+Employee Name    Employee ID    Designation           Salary
+John              110110         Director               150000
+Jacob             12390         Software Developer     50000
+Yogendar          125683        Network Engineer       45000
+Soham             122787          M.D                  300000
+Hitesh            125376        C.E.0                  1500000
+Q3)
+cat test2.txt
+Employee Name    Employee ID    Designation           Salary
+John              110110         Director               150000
+Jacob             12390         Software Developer     50000
+Yogendar          125683        Network Engineer       45000
+Soham             122787          M.D                  300000
+Hitesh            125376        C.E.0                  1500000
+-----> To search for names that start with "S"
+$ grep -i ^s test2.txt
+Soham             122787          M.D                  300000
+Q4)
+---->
+cat test
+Aggarwal
+Agarwal
+Agrawal
+Aggrawal
+aggarwal
+agarwal
+aggrawal
+agrawal
+----> 
+Find a regular expression for the above file:
+--> grep [aA][gg]g*[ar][ra]wal test
+Result:
+Aggarwal
+Agarwal
+Agrawal
+Aggrawal
+aggarwal
+agarwal
+aggrawal
+agrawal
