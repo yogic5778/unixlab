@@ -1,0 +1,85 @@
+Q2) File related commands:
+--->
+  i) diff:
+  test---->kkjmkmf
+  test1--->cnhnbjjjoihjjh j n h cnbhc jn ygqijpn
+  $diff test test1:
+  result:
+   1,2c1
+ < 
+ < kkjmkmf
+ ---
+ > cnhnbjjjoihjjh j n h cnbhc jn ygqijpn 
+ ii) $cmp:
+    result:
+    test test1 differ: byte 1, line 1
+ iii) $comm:
+      result:
+     	cnhnbjjjoihjjh j n h cnbhc jn ygqijpn 
+ kkjmkmf
+ iv) $cp test test2:
+     result:
+      $cat test2
+       kkjmkmf
+   v) $mv test test3:
+       result:
+       $cat test
+      cat: test: No such file or directory
+       $cat test3
+       kkjmkmf
+  vi) $rm test2
+     result:
+     cat: test2: No such file or directory
+Q3) ./ls5_for.sh
+ bash: ./ls5_for.sh: Permission denied
+  chmod 755 ls5_for.sh
+ $./ls5_for.sh
+Enter the value 0f n
+3
+1
+2
+3
+Q5) find:
+   $find $pwd -name "*.txt" -print
+./ls3.txt
+./test.txt
+./achal.txt
+./ls4.txt
+./ls5.txt
+./ls2.txt
+
+  xargs:
+   echo a b c d e f| xargs -n 2
+ a b
+ c d
+ e f
+Q1)
+  if [ -r `$file` ]
+then
+        echo " The file has read permission"
+else
+     echo "The file does not  have read permission"
+     fi
+if [ -w `$file` ]
+then
+        echo "The file has write permission"
+else
+         echo "The file does not have write permission"
+ fi
+if  [ -x `$file`]
+then
+         echo "The file has execution permission"
+ else
+          echo "The file does not  have write permission"
+
+ fi
+    result:
+     sh test.sh
+ The file has read permission
+ The file has write permission
+ The file has execution permission
+Q4)
+----> time=`date +%d-%m-%Y` #
+ for i in *
+ mv $i $(date "+_%d%m%Y") ${i%}
+done 
