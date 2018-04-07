@@ -1,0 +1,22 @@
+Lab session 8:
+Questions on awk:
+2)To print only the odd numbered lines of a file:
+--->  awk 'NR%2 != 0' texta.txt
+ Hello
+ Unix Lab session on awk command
+ Have a nice Day
+3) To print the last field of column without knowing the number of columns:
+---> awk '{ print $NR}' texta.txt
+Hello
+
+session
+test
+4) Equivalent awk commands:
+-----> 
+       i) head -n 5 filename:
+           awk '{print $1,$5}' filename
+       ii) sed '5,10p' filename
+            awk '{print $5,$10}' filename
+        iii) tail +20 file name
+            
+
